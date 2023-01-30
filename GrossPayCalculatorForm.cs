@@ -16,5 +16,22 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Employee's Gross Pay is: $" + 
+                String.Format("{0:C4}",Convert.ToString(Convert.ToDouble(Convert.ToInt32(payCycleLengthTextBox.Text) * 
+                Convert.ToInt32(hoursWorkedTextBox.Text) * 
+                Convert.ToDouble(hourlyRateTextBox.Text)))));
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
